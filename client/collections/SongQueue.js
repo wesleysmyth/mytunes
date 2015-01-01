@@ -17,12 +17,11 @@ var SongQueue = Songs.extend({
     // })
   },
 
-  //create 'add' method that adds a song model to the SongQueue
-  add: function(song) {
-    //add song model to the front of the song queue
-    this.queue.unshift(song);
-    this.playFirst();
-  },
+  // //create 'add' method that adds a song model to the SongQueue
+  // add: function(song) {
+  //   //add song model to the front of the song queue
+  //   this.set(song);
+  // },
 
   //create 'playfirst' method that plays a song after it's added to the SongQueue
   playFirst: function() {
