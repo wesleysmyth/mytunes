@@ -50,7 +50,6 @@ var SongQueue = Songs.extend({
 
   dequeue: function(song) {
     this.remove(song);
-    console.log('triggered');
   },
   
   // create event handler when ended is triggered
@@ -58,6 +57,7 @@ var SongQueue = Songs.extend({
     this.shift();
     //after removing the first song from the queue, call playfirst to play next song
     //that is now at the 0th index
+
     //if the SongQueue length is > 0, call playFirst
     if (this.length > 0) {
       this.playFirst();
@@ -72,7 +72,7 @@ var SongQueue = Songs.extend({
 
   //create 'playfirst' method that plays a song after it's added to the SongQueue
   playFirst: function() {
-
+    this.get(this.at(0)).play();
   },
   //create 'dequeue' method that removes the model passed into 'dequeue'
   // dequeue: function(song) {
